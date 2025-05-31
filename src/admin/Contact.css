@@ -1,0 +1,56 @@
+body {
+  color: #fff;
+  background-color: #121212;
+  font-family: Arial, sans-serif;
+}
+
+.table-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-x: auto; /* Enables horizontal scroll if needed */
+}
+
+table {
+  margin-top: 100px;
+  padding: 20px;
+  width: 100%; /* Allow it to take full available width */
+  border: 2px solid #fff;
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+}
+
+td, th {
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 8px 12px;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .table-parent {
+    padding: 10px;
+  }
+
+  table {
+    margin-top: 400px;
+    font-size: 14px;
+  }
+
+  td, th {
+    padding: 6px 8px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  table {
+    margin-top: 300px;
+    font-size: 12px;
+  }
+
+  td, th {
+    padding: 4px 6px;
+  }
+}

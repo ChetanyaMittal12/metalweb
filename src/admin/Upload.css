@@ -1,0 +1,83 @@
+input {
+  width: 90%;
+  background-color: #f0f0f0; /* lighter neutral instead of pure white for less glare */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.parent {
+  display: block; /* removed flex */
+  justify-content: center; /* this won’t apply without flex */
+  align-items: center;    /* this won’t apply without flex */
+  gap: 20px; /* gap only works with flex/grid, so no effect here */
+  flex-wrap: wrap; /* also no effect */
+  padding: 20px;
+}
+
+.base64-image {
+  width: 100%; /* Responsive to container */
+  max-width: 300px; /* Limit maximum width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #008080aa; /* subtle teal glow */
+}
+
+.upload-image {
+  width: 100%;
+  max-width: 300px; /* Prevents it from stretching too much */
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px dashed #008080;
+  cursor: pointer;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  margin: 10px auto; /* Center it if no flex/grid used */
+  display: block;
+}
+
+.upload-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px
+    ;
+}
+.upload-image:hover {
+  border-color: #00cccc;
+}
+
+i {
+  font-size: 48px;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  color: #008080;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+i:hover {
+  color: #00cccc;
+}
+
+.Container {
+  position: relative;
+  width: fit-content;
+  /* background-color: #008080; */
+}
+.store {
+  display: flex;
+  flex-wrap: wrap; /* Enables wrapping */
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  /* background-color: aqua; */
+  padding: 10px;
+}
+
+

@@ -1,0 +1,146 @@
+/* ===== NAVBAR BASE STYLE ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* Better gradient */
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  flex-wrap: wrap;
+  gap: 10px;
+  animation: slideDown 0.5s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== LOGO STYLE ===== */
+.logo-parent {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 25%;
+  gap: 12px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.logo-parent img {
+  width: 40px;
+  margin-left: 20px;
+}
+
+/* ===== NAV LINKS STYLE ===== */
+.nav-item-parent {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nav-item-parent a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-item-parent a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #00ffff;
+  transition: 0.4s;
+}
+
+.nav-item-parent a:hover {
+  color: #00ffff;
+}
+
+.nav-item-parent a:hover::after {
+  width: 100%;
+}
+
+/* ===== LOGIN BUTTON STYLE ===== */
+.login {
+  background-color: #00c9a7;
+  padding: 8px 20px;
+  width: fit-content;
+  margin-right: 20px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 201, 167, 0.4);
+}
+
+.login:hover{
+  background-color: #00a88f;
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE: STACK ON SMALL SCREENS ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .logo-parent {
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .nav-item-parent {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .login {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

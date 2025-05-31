@@ -1,0 +1,103 @@
+/* Container */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aliceblue; */
+  width: 90%;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+    width: 100%;
+  padding: 10px 40px 10px 10px; /* padding-right for icon space */
+  box-sizing: border-box;
+}
+.icon-unicode {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  user-select: none;
+  font-size: 20px;
+  background-color: transparent; /* remove red unless for debugging */
+  padding: 0; /* no extra height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.input-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  
+  background-color: #1e1e1e;  /* Dark steel background */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #ddd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+input {
+  position: relative;
+  padding: 12px 15px;
+  width: 280px;
+  max-width: 90vw;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: #000;
+  
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  background-color: #333;
+  box-shadow: 0 0 8px #007bff;
+  color: #fff;
+}
+
+/* Button */
+button {
+  padding: 12px 15px;
+  width: 280px;
+  max-width: 90vw;
+  border-radius: 25px;
+  border: none;
+  background-color: #008080;  /* Teal accent */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 128, 128, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Responsive */
+@media (max-width: 480px) {
+  input, button {
+    width: 90vw;
+  }
+}
